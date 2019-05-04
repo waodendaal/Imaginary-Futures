@@ -22,3 +22,7 @@ p {
     height: 50%;
     border: solid 1px red;
 }
+
+.row div {
+    border: solid 1px red;
+}
