@@ -25,4 +25,12 @@ p {
 
 .row div {
     border: solid 1px red;
+    height: 100%;
+}
+.background_top {
+    width: 100%;
+    height: 25%;
+    background:blue; 
+    position: absolute;
+    z-index:-1;
 }
