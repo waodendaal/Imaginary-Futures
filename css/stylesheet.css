@@ -33,4 +33,13 @@ p {
     background:blue; 
     position: absolute;
     z-index:-1;
+    top:0;
+}
+.background_bottom {
+    width: 100%;
+    height: 50%;
+    background:blue; 
+    position: absolute;
+    z-index:-1;
+    bottom:0;
 }
