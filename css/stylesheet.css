@@ -7,3 +7,18 @@ p {
     font-size: 10px;
     color: #E2D2AB;
 }
+
+.header {
+    height: 25%;
+    border: solid 1px red;
+}
+
+.timeline_container {
+    height: 25%;
+    border: solid 1px red;
+}
+
+.info_blocks {
+    height: 50%;
+    border: solid 1px red;
+}
