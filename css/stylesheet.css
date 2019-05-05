@@ -53,3 +53,35 @@ p {
     z-index:-1;
     bottom:0;
 }
+/* Animate the logo. Code with help from: http://jsfiddle.net/gionaf/Ugc5g/ */
+.logo img {
+    position: absolute;
+    width: 50px;
+    height: 50px;
+}
+
+.logoA {
+    z-index:3;
+}
+
+.logoB {
+    z-index:2;
+    -webkit-animation:spinB 4s linear infinite;
+    -moz-animation:spinB 4s linear infinite;
+    animation:spinB 4s linear infinite;
+}
+
+.logoC {
+    z-index:1;
+    -webkit-animation:spinC 4s linear infinite;
+    -moz-animation:spinC 4s linear infinite;
+    animation:spinC 4s linear infinite;
+}
+
+@-moz-keyframes spinB { 100% { -moz-transform: rotate(-360deg); } }
+@-webkit-keyframes spinB { 100% { -webkit-transform: rotate(-360deg); } }
+@keyframes spinB { 100% { -webkit-transform: rotate(-360deg); transform:rotate(-360deg); } }
+
+@-moz-keyframes spinC { 100% { -moz-transform: rotate(360deg); } }
+@-webkit-keyframes spinC { 100% { -webkit-transform: rotate(360deg); } }
+@keyframes spinC { 100% { -webkit-transform: rotate(360deg); transform:rotate(360deg); } }
