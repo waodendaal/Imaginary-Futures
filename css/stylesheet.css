@@ -10,21 +10,17 @@ p {
 
 .header {
     height: 25%;
-    border: solid 1px red;
 }
 
 .timeline_container {
     height: 25%;
-    border: solid 1px red;
 }
 
 .info_blocks {
     height: 50%;
-    border: solid 1px red;
 }
 
 .row div {
-    border: solid 1px red;
     height: 100%;
 }
 .background_top {
@@ -37,7 +33,7 @@ p {
     background: -o-linear-gradient(top, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0) 59%, rgba(0, 0, 0, 0.65) 100%), url('../imgs/dots-grid-design-by-Vexels.svg') repeat;
     background: -ms-linear-gradient(top, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0) 59%, rgba(0, 0, 0, 0.65) 100%), url('../imgs/dots-grid-design-by-Vexels.svg') repeat;
     background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0) 59%, rgba(0, 0, 0, 0.65) 100%), url('../imgs/dots-grid-design-by-Vexels.svg') repeat;
-    height: 200px;
+    background-size: 20%;
     position: absolute;
     z-index:-1;
     top:0;
@@ -51,6 +47,7 @@ p {
     background: -o-linear-gradient(bottom, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0) 59%, rgba(0, 0, 0, 0.65) 100%), url('../imgs/dots-grid-design-by-Vexels.svg') repeat;
     background: -ms-linear-gradient(bottom, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0) 59%, rgba(0, 0, 0, 0.65) 100%), url('../imgs/dots-grid-design-by-Vexels.svg') repeat;
     background: linear-gradient(to top, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0) 59%, rgba(0, 0, 0, 0.65) 100%), url('../imgs/dots-grid-design-by-Vexels.svg') repeat;
+    background-size: 20%;
     position: absolute;
     z-index:-1;
     bottom:0;
