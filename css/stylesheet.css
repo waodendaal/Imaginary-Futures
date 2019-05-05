@@ -30,7 +30,13 @@ p {
 .background_top {
     width: 100%;
     height: 25%;
-    background:blue; 
+    background: -moz-linear-gradient(top, rgba(0, 0, 0, 0) 100%, rgba(0, 0, 0, 0) 59%, rgba(0, 0, 0, 0.65) 0%), url('imgs/dots-grid-design-by-Vexels.svg') repeat;
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, rgba(0, 0, 0, 0)), color-stop(0%, rgba(0, 0, 0, 0)), color-stop(100%, rgba(0, 0, 0, 0.65))), url('imgs/dots-grid-design-by-Vexels.svg') repeat;
+    background: -webkit-linear-gradient(top, rgba(0, 0, 0, 0) 100%, rgba(0, 0, 0, 0) 59%, rgba(0, 0, 0, 0.65) 0%), url('imgs/dots-grid-design-by-Vexels.svg') repeat;
+    background: -o-linear-gradient(top, rgba(0, 0, 0, 0) 100%, rgba(0, 0, 0, 0) 59%, rgba(0, 0, 0, 0.65) 0%), url('imgs/dots-grid-design-by-Vexels.svg') repeat;
+    background: -ms-linear-gradient(top, rgba(0, 0, 0, 0) 100%, rgba(0, 0, 0, 0) 59%, rgba(0, 0, 0, 0.65) 0%), url('imgs/dots-grid-design-by-Vexels.svg') repeat;
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 100%, rgba(0, 0, 0, 0) 59%, rgba(0, 0, 0, 0.65) 0%), url('imgs/dots-grid-design-by-Vexels.svg') repeat;
+    height: 200px;
     position: absolute;
     z-index:-1;
     top:0;
