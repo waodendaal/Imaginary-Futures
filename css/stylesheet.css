@@ -1,16 +1,14 @@
 body {
     background: black;
-    font-size: 10em;
     color: #8CC5C4;
     font-family: 'Rajdhani', sans-serif;
 }
 p {
-    font-size: 10px;
-    color: #E2D2AB;
+   color: #E2D2AB;
 }
-
-.header {
-    height: 25%;
+.border_gradient {
+    background-image: -webkit-gradient(linear, left, right, color-stop(0.33, rgb(14,173,173)), color-stop(0.67, rgb(0,255,255)));
+    background-image: -moz-linear-gradient(center bottom, rgb(14,173,173) 33%, rgb(0,255,255) 67% );    
 }
 
 .timeline_container {
@@ -19,6 +17,17 @@ p {
 
 .info_blocks {
     height: 50%;
+}
+
+/* Text block gradient border and center black */
+.text_block {
+    background-image: -webkit-gradient(linear, left, color-stop(0.33, rgb(226,210,171) ), color-stop(0.67,  rgb(140,197,196)));
+    background-image: -moz-linear-gradient(left, rgb(226,210,171) 33%, rgb(140,197,196) 67% );
+    padding: 2px; 
+    border-radius: 25%;
+}
+.text_block > p { 
+    background: black; 
 }
 
 .row div {
