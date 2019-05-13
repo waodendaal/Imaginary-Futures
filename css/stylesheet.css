@@ -1,11 +1,13 @@
 body {
     background: black;
-    color: #8CC5C4;
     font-family: 'Rajdhani', sans-serif;
+    color: #E2D2AB;
 }
-p {
-   color: #E2D2AB;
+
+h1, h2, h3, h4, h5 {
+    color: #8CC5C4;
 }
+
 .border_gradient {
     background-image: -webkit-gradient(linear, left, right, color-stop(0.33, rgb(14,173,173)), color-stop(0.67, rgb(0,255,255)));
     background-image: -moz-linear-gradient(center bottom, rgb(14,173,173) 33%, rgb(0,255,255) 67% );    
@@ -24,15 +26,14 @@ p {
     background-image: -webkit-gradient(linear, left, color-stop(0.33, rgb(226,210,171) ), color-stop(0.67,  rgb(140,197,196)));
     background-image: -moz-linear-gradient(left, rgb(226,210,171) 33%, rgb(140,197,196) 67% );
     padding: 2px; 
-    border-radius: 25%;
+    border-radius: 5px;
 }
-.text_block > p { 
+.text_block > div { 
     background: black; 
+    border-radius:5px;
+    padding:5px;
 }
 
-.row div {
-    height: 100%;
-}
 .background_top {
     /* Backgronud image gradient solution: https://stackoverflow.com/questions/16589519/use-css-gradient-over-background-image */
     width: 100%;

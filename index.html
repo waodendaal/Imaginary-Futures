@@ -1,39 +1,190 @@
 <html>
-<header>
+<head>
     <meta charset="UTF-8">
     <meta name="description" content="xxx">
     <meta name="keywords" content="xxx">
     <meta name="author" content="Adriaan Odendaal">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- SCRIPTS -->
-    <script src="jquery-3.4.0.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <!--Timeline-->
+    <script>document.getElementsByTagName("html")[0].className += " js";</script>
+    <link rel="stylesheet" href="css/timeline/style.css">
     <!-- CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" href="css/stylesheet.css">
     <link href="https://fonts.googleapis.com/css?family=Rajdhani" rel="stylesheet">
-</header>
+</head>
 <body>
     <div class="background_top"></div>
     <div class = "container">
         <div class ="header">
             <div class ="row"> 
-                <div class="logo">
-                    <img class = "logoA" src = "imgs/logoA.svg">
-                    <img class = "logoB" src = "imgs/logoB.svg">
-                    <img class = "logoC" src = "imgs/logoC.svg">
+                <div class="col-md-1">
+                    <div class="logo">
+                        <img class = "logoA" src = "imgs/logoA.svg">
+                        <img class = "logoB" src = "imgs/logoB.svg">
+                        <img class = "logoC" src = "imgs/logoC.svg">
+                    </div>
                 </div>
-                <h1>Imaginary Futures</h1>
+                <div class="col-md-6">
+                    <h1>Imaginary Futures!</h1>
+                </div>
             </div>
-            <h2>Yesterday's Vision Of Tomorrow’s Future</h2>
+            <h2>Yesterday's Vision Of Tomorrow</h2>
             <div class = "text_block">
-                <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna ali</p>
+                <div>
+                    Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna ali
+                </div>
             </div>
         </div>
         <div class = "timeline_container">
-            <h1>/Timeline/</h1>
+                <section class="cd-h-timeline js-cd-h-timeline margin-bottom--md">                    
+                        <div class="cd-h-timeline__container container">
+                          <div class="cd-h-timeline__dates">
+                            <div class="cd-h-timeline__line">
+                              <ol>
+                                <li><a href="#0" data-date="16/01/2014" class="cd-h-timeline__date cd-h-timeline__date--selected">16 Jan</a></li>
+                                <li><a href="#0" data-date="28/02/2014" class="cd-h-timeline__date">28 Feb</a></li>
+                                <li><a href="#0" data-date="20/04/2014" class="cd-h-timeline__date">20 Mar</a></li>
+                                <li><a href="#0" data-date="20/05/2014" class="cd-h-timeline__date">20 May</a></li>
+                                <li><a href="#0" data-date="09/07/2014" class="cd-h-timeline__date">09 Jul</a></li>
+                                <li><a href="#0" data-date="30/08/2014" class="cd-h-timeline__date">30 Aug</a></li>
+                                <li><a href="#0" data-date="15/09/2014" class="cd-h-timeline__date">15 Sep</a></li>
+                                <li><a href="#0" data-date="01/11/2014" class="cd-h-timeline__date">01 Nov</a></li>
+                                <li><a href="#0" data-date="10/12/2014" class="cd-h-timeline__date">10 Dec</a></li>
+                                <li><a href="#0" data-date="19/01/2015" class="cd-h-timeline__date">29 Jan</a></li>
+                                <li><a href="#0" data-date="03/03/2015" class="cd-h-timeline__date">3 Mar</a></li>
+                              </ol>
+                    
+                              <span class="cd-h-timeline__filling-line" aria-hidden="true"></span>
+                            </div> <!-- .cd-h-timeline__line -->
+                          </div> <!-- .cd-h-timeline__dates -->
+                            
+                          <ul>
+                            <li><a href="#0" class="text--replace cd-h-timeline__navigation cd-h-timeline__navigation--prev cd-h-timeline__navigation--inactive">Prev</a></li>
+                            <li><a href="#0" class="text--replace cd-h-timeline__navigation cd-h-timeline__navigation--next">Next</a></li>
+                          </ul>
+                        </div> <!-- .cd-h-timeline__container -->
+                    
+                        <div class="cd-h-timeline__events">
+                          <ol>
+                            <li class="cd-h-timeline__event cd-h-timeline__event--selected text-component">
+                              <div class="cd-h-timeline__event-content container">
+                                <h2 class="cd-h-timeline__event-title">Horizontal Timeline</h2>
+                                <em class="cd-h-timeline__event-date">January 16th, 2014</em>
+                                <p class="cd-h-timeline__event-description text--subtle"> 
+                                  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illum praesentium officia, fugit recusandae ipsa, quia velit nulla adipisci? Consequuntur aspernatur at, eaque hic repellendus sit dicta consequatur quae, ut harum ipsam molestias maxime non nisi reiciendis eligendi! Doloremque quia pariatur harum ea amet quibusdam quisquam, quae, temporibus dolores porro doloribus.
+                                </p>
+                              </div>
+                            </li>
+                    
+                            <li class="cd-h-timeline__event text-component">
+                              <div class="cd-h-timeline__event-content container">
+                                <h2 class="cd-h-timeline__event-title">Event title here</h2>
+                                <em class="cd-h-timeline__event-date">February 28th, 2014</em>
+                                <p class="cd-h-timeline__event-description text--subtle"> 
+                                  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illum praesentium officia, fugit recusandae ipsa, quia velit nulla adipisci? Consequuntur aspernatur at, eaque hic repellendus sit dicta consequatur quae, ut harum ipsam molestias maxime non nisi reiciendis eligendi! Doloremque quia pariatur harum ea amet quibusdam quisquam, quae, temporibus dolores porro doloribus.
+                                </p>
+                              </div>
+                            </li>
+                    
+                            <li class="cd-h-timeline__event text-component">
+                              <div class="cd-h-timeline__event-content container">
+                                <h2 class="cd-h-timeline__event-title">Event title here</h2>
+                                <em class="cd-h-timeline__event-date">March 20th, 2014</em>
+                                <p class="cd-h-timeline__event-description text--subtle"> 
+                                  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illum praesentium officia, fugit recusandae ipsa, quia velit nulla adipisci? Consequuntur aspernatur at, eaque hic repellendus sit dicta consequatur quae, ut harum ipsam molestias maxime non nisi reiciendis eligendi! Doloremque quia pariatur harum ea amet quibusdam quisquam, quae, temporibus dolores porro doloribus.
+                                </p>
+                              </div>
+                            </li>
+                    
+                            <li class="cd-h-timeline__event text-component">
+                              <div class="cd-h-timeline__event-content container">
+                                <h2 class="cd-h-timeline__event-title">Event title here</h2>
+                                <em class="cd-h-timeline__event-date">May 20th, 2014</em>
+                                <p class="cd-h-timeline__event-description text--subtle"> 
+                                  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illum praesentium officia, fugit recusandae ipsa, quia velit nulla adipisci? Consequuntur aspernatur at, eaque hic repellendus sit dicta consequatur quae, ut harum ipsam molestias maxime non nisi reiciendis eligendi! Doloremque quia pariatur harum ea amet quibusdam quisquam, quae, temporibus dolores porro doloribus.
+                                </p>
+                              </div>
+                            </li>
+                    
+                            <li class="cd-h-timeline__event text-component">
+                              <div class="cd-h-timeline__event-content container">
+                                <h2 class="cd-h-timeline__event-title">Event title here</h2>
+                                <em class="cd-h-timeline__event-date">July 9th, 2014</em>
+                                <p class="cd-h-timeline__event-description text--subtle"> 
+                                  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illum praesentium officia, fugit recusandae ipsa, quia velit nulla adipisci? Consequuntur aspernatur at, eaque hic repellendus sit dicta consequatur quae, ut harum ipsam molestias maxime non nisi reiciendis eligendi! Doloremque quia pariatur harum ea amet quibusdam quisquam, quae, temporibus dolores porro doloribus.
+                                </p>
+                              </div>
+                            </li>
+                    
+                            <li class="cd-h-timeline__event text-component">
+                              <div class="cd-h-timeline__event-content container">
+                                <h2 class="cd-h-timeline__event-title">Event title here</h2>
+                                <em class="cd-h-timeline__event-date">August 30th, 2014</em>
+                                <p class="cd-h-timeline__event-description text--subtle"> 
+                                  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illum praesentium officia, fugit recusandae ipsa, quia velit nulla adipisci? Consequuntur aspernatur at, eaque hic repellendus sit dicta consequatur quae, ut harum ipsam molestias maxime non nisi reiciendis eligendi! Doloremque quia pariatur harum ea amet quibusdam quisquam, quae, temporibus dolores porro doloribus.
+                                </p>
+                              </div>
+                            </li>
+                    
+                            <li class="cd-h-timeline__event text-component">
+                              <div class="cd-h-timeline__event-content container">
+                                <h2 class="cd-h-timeline__event-title">Event title here</h2>
+                                <em class="cd-h-timeline__event-date">September 15th, 2014</em>
+                                <p class="cd-h-timeline__event-description text--subtle"> 
+                                  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illum praesentium officia, fugit recusandae ipsa, quia velit nulla adipisci? Consequuntur aspernatur at, eaque hic repellendus sit dicta consequatur quae, ut harum ipsam molestias maxime non nisi reiciendis eligendi! Doloremque quia pariatur harum ea amet quibusdam quisquam, quae, temporibus dolores porro doloribus.
+                                </p>
+                              </div>
+                            </li>
+                    
+                            <li class="cd-h-timeline__event text-component">
+                              <div class="cd-h-timeline__event-content container">
+                                <h2 class="cd-h-timeline__event-title">Event title here</h2>
+                                <em class="cd-h-timeline__event-date">November 1st, 2014</em>
+                                <p class="cd-h-timeline__event-description text--subtle"> 
+                                  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illum praesentium officia, fugit recusandae ipsa, quia velit nulla adipisci? Consequuntur aspernatur at, eaque hic repellendus sit dicta consequatur quae, ut harum ipsam molestias maxime non nisi reiciendis eligendi! Doloremque quia pariatur harum ea amet quibusdam quisquam, quae, temporibus dolores porro doloribus.
+                                </p>
+                              </div>
+                            </li>
+                    
+                            <li class="cd-h-timeline__event text-component">
+                              <div class="cd-h-timeline__event-content container">
+                                <h2 class="cd-h-timeline__event-title">Event title here</h2>
+                                <em class="cd-h-timeline__event-date">December 10th, 2014</em>
+                                <p class="cd-h-timeline__event-description text--subtle"> 
+                                  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illum praesentium officia, fugit recusandae ipsa, quia velit nulla adipisci? Consequuntur aspernatur at, eaque hic repellendus sit dicta consequatur quae, ut harum ipsam molestias maxime non nisi reiciendis eligendi! Doloremque quia pariatur harum ea amet quibusdam quisquam, quae, temporibus dolores porro doloribus.
+                                </p>
+                              </div>
+                            </li>
+                    
+                            <li class="cd-h-timeline__event text-component">
+                              <div class="cd-h-timeline__event-content container">
+                                <h2 class="cd-h-timeline__event-title">Event title here</h2>
+                                <em class="cd-h-timeline__event-date">January 29th, 2015</em>
+                                <p class="cd-h-timeline__event-description text--subtle"> 
+                                  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illum praesentium officia, fugit recusandae ipsa, quia velit nulla adipisci? Consequuntur aspernatur at, eaque hic repellendus sit dicta consequatur quae, ut harum ipsam molestias maxime non nisi reiciendis eligendi! Doloremque quia pariatur harum ea amet quibusdam quisquam, quae, temporibus dolores porro doloribus.
+                                </p>
+                              </div>
+                            </li>
+                    
+                            <li class="cd-h-timeline__event text-component">
+                              <div class="cd-h-timeline__event-content container">
+                                <h2 class="cd-h-timeline__event-title">Event title here</h2>
+                                <em class="cd-h-timeline__event-date">March 3rd, 2015</em>
+                                <p class="cd-h-timeline__event-description text--subtle"> 
+                                  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illum praesentium officia, fugit recusandae ipsa, quia velit nulla adipisci? Consequuntur aspernatur at, eaque hic repellendus sit dicta consequatur quae, ut harum ipsam molestias maxime non nisi reiciendis eligendi! Doloremque quia pariatur harum ea amet quibusdam quisquam, quae, temporibus dolores porro doloribus.
+                                </p>
+                              </div>
+                            </li>
+                          </ol>
+                        </div> <!-- .cd-h-timeline__events -->
+                      </section>
+
         </div>
         <div class = "info_blocks">
             <div class = "row">
@@ -41,7 +192,7 @@
                     <h1>/Thing 1/</h1>
                 </div>
                 <div class = "col-md-8">
-                    <h1>/Info blocks/</h1>
+                    <!-- Info Blocks -->
                 </div>
                 <div class = "col-md-2">
                     <h1>/Thing 2/</h1>
@@ -50,6 +201,9 @@
         </div>
     </div>
     <div class="background_bottom"> </div>
+    <script src="js/timeline/util.js"></script> <!-- util functions included in the CodyHouse framework -->
+    <script src="js/timeline/swipe-content.js"></script> <!-- A Vanilla JavaScript plugin to detect touch interactions -->
+    <script src="js/timeline/main.js"></script>
 </body>
 
 
