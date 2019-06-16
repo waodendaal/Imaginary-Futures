@@ -1,4 +1,3 @@
-// Utility function
 function Util () {};
 
 /* 
@@ -172,3 +171,54 @@ Math.easeInOutQuad = function (t, b, c, d) {
 	t--;
 	return -c/2 * (t*(t-2) - 1) + b;
 };
+
+//Rivets on Timeline
+
+$(document).ready(function() {
+  //Get coordinates
+  let timelineDots = $('.cd-h-timeline__date');
+  for (let i = 0; i < timelineDots.length; i ++){
+    let dot = timelineDots[i]
+    let rect = dot.getBoundingClientRect();
+    console.log(rect.top, rect.right, rect.bottom, rect.left);
+
+    //Get position
+    let position = Math.floor( Math.random() * 4 )
+    if (position == 0)
+    {
+      //Bracket right
+      // let bracket = '<div class="bracket_right"><img src="/static/imgs/bracket_right.svg"><p>12/20/20</p></div>'
+
+      let newDomL1 = '<div class="timeline_rivets" style="opacity: 0.25;; width: 25px; height: 20px; left: 6; border-right: 30px solid transparent; border-bottom: 20px solid black;"></div>'
+      let newDomL2 = '<div class="timeline_rivets" style="opacity: 0.50; width: 25px; height: 20px; left: 39px;"></div>'
+      let newDomL3 = '<div class="timeline_rivets" style="opacity: 0.75; width: 25px; height: 20px; left: 68px;"></div>' + '<div class="timeline_rivets" style="opacity: 0.75; top:20px; width: 20px; height: 10px; left: 68px; border-right: 25px solid transparent; border-bottom: 10px solid black;"></div>'
+      let newDomCenter = '<div class="timeline_rivets" style="width: 25px; height: 30px; left: 97px;"></div>';
+      let newDomR1 = '<div class="timeline_rivets" style="right: 12; opacity: 0.25;; width: 25px; height: 20px; border-left: 25px solid transparent; border-bottom: 20px solid black;"></div>'
+      let newDomR2 = '<div class="timeline_rivets" style="opacity: 0.50; width: 30px; height: 20px; right: 40px;"></div>'
+      let newDomR3 = '<div class="timeline_rivets" style="opacity: 0.75; width: 25px; height: 20px; right: 74px;"></div>' + '<div class="timeline_rivets" style="opacity: 0.75; top:20px; width: 25px; height: 10px; right: 74px; border-left: 25px solid transparent; border-bottom: 10px solid black;"></div>'
+      let shell = '<div style="bottom:8px; width: 225px; height: 40px;position: absolute; transform: scaleY(-1)">' + newDomL1 + newDomL2 + newDomL3 + newDomCenter + newDomR1 + newDomR2 + newDomR3 + '</div>';
+      $(shell).appendTo(dot);  
+      // $(bracket).appendTo(dot);  
+
+    } 
+    if (position == 2)
+        {
+
+        //Bracket left
+        // let bracket = '<div class="bracket_left"><p>12/20/20</p><img src="/static/imgs/bracket_left.svg"></div>'
+
+        let newDomL1 = '<div class="timeline_rivets rivets_bottom" style="opacity: 0.25;; width: 25px; height: 20px; left: 6; border-right: 30px solid transparent; border-bottom: 20px solid black;"></div>'
+        let newDomL2 = '<div class="timeline_rivets rivets_bottom" style="opacity: 0.50; width: 25px; height: 20px; left: 39px;"></div>'
+        let newDomL3 = '<div class="timeline_rivets rivets_bottom" style="opacity: 0.75; width: 25px; height: 20px; left: 68px;"></div>' + '<div class="timeline_rivets rivets_bottom" style="opacity: 0.75; top:20px; width: 20px; height: 10px; left: 68px; border-right: 25px solid transparent; border-bottom: 10px solid black;"></div>'
+        let newDomCenter = '<div class="timeline_rivets rivets_bottom" style="width: 25px; height: 30px; left: 97px;"></div>';
+        let newDomR1 = '<div class="timeline_rivets rivets_bottom" style="right: 12; opacity: 0.25;; width: 25px; height: 20px; border-left: 25px solid transparent; border-bottom: 20px solid black;"></div>'
+        let newDomR2 = '<div class="timeline_rivets rivets_bottom" style="opacity: 0.50; width: 30px; height: 20px; right: 40px;"></div>'
+        let newDomR3 = '<div class="timeline_rivets rivets_bottom" style="opacity: 0.75; width: 25px; height: 20px; right: 74px;"></div>' + '<div class="timeline_rivets rivets_bottom" style="opacity: 0.75; top:20px; width: 25px; height: 10px; right: 74px; border-left: 25px solid transparent; border-bottom: 10px solid black;"></div>'
+        let shell = '<div style="top:15px; width: 225px; height: 40px;position: absolute;">' + newDomL1 + newDomL2 + newDomL3 + newDomCenter + newDomR1 + newDomR2 + newDomR3 + '</div>';
+        $(shell).appendTo(dot);  
+        // $(bracket).appendTo(dot);  
+
+    } 
+  }
+
+});

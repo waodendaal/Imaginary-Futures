@@ -1,7 +1,8 @@
 <html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="description" content="xxx">
+  <meta content="text/html;charset=utf-8" http-equiv="Content-Type">
+  <meta content="utf-8" http-equiv="encoding">
+  <meta name="description" content="xxx">
     <meta name="keywords" content="xxx">
     <meta name="author" content="Adriaan Odendaal">
   <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -12,11 +13,11 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
     <!--Timeline-->
     <script>document.getElementsByTagName("html")[0].className += " js";</script>
-    <link rel="stylesheet" href="css/timeline/style.css">
+    <link rel="stylesheet" href="/static/css/timeline/style.css">
     <!-- CSS -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <link rel="stylesheet" href="css/stylesheet.css">
-    <link href="https://fonts.googleapis.com/css?family=Rajdhani" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="/static/css/stylesheet.css">
+    <link type="text/css" href="https://fonts.googleapis.com/css?family=Rajdhani" rel="stylesheet">
 </head>
 <body>
     <div class="background_top"></div>
@@ -25,9 +26,9 @@
             <div class ="row"> 
                 <div class="col-md-1">
                     <div class="logo">
-                        <img class = "logoA" src = "imgs/logoA.svg">
-                        <img class = "logoB" src = "imgs/logoB.svg">
-                        <img class = "logoC" src = "imgs/logoC.svg">
+                        <img class = "logoA" src = "/static/imgs/logoA.svg">
+                        <img class = "logoB" src = "/static/imgs/logoB.svg">
+                        <img class = "logoC" src = "/static/imgs/logoC.svg">
                     </div>
                 </div>
                 <div class="col-md-6">
@@ -47,17 +48,63 @@
                           <div class="cd-h-timeline__dates">
                             <div class="cd-h-timeline__line">
                               <ol>
-                                <li><a href="#0" data-date="16/01/2014" class="cd-h-timeline__date cd-h-timeline__date--selected">16 Jan</a></li>
-                                <li><a href="#0" data-date="28/02/2014" class="cd-h-timeline__date">28 Feb</a></li>
-                                <li><a href="#0" data-date="20/04/2014" class="cd-h-timeline__date">20 Mar</a></li>
-                                <li><a href="#0" data-date="20/05/2014" class="cd-h-timeline__date">20 May</a></li>
-                                <li><a href="#0" data-date="09/07/2014" class="cd-h-timeline__date">09 Jul</a></li>
-                                <li><a href="#0" data-date="30/08/2014" class="cd-h-timeline__date">30 Aug</a></li>
-                                <li><a href="#0" data-date="15/09/2014" class="cd-h-timeline__date">15 Sep</a></li>
-                                <li><a href="#0" data-date="01/11/2014" class="cd-h-timeline__date">01 Nov</a></li>
-                                <li><a href="#0" data-date="10/12/2014" class="cd-h-timeline__date">10 Dec</a></li>
-                                <li><a href="#0" data-date="19/01/2015" class="cd-h-timeline__date">29 Jan</a></li>
-                                <li><a href="#0" data-date="03/03/2015" class="cd-h-timeline__date">3 Mar</a></li>
+                                <li>
+                                  <a href="#0" data-date="16/01/2014" class="cd-h-timeline__date cd-h-timeline__date--selected">
+                                    <div class="second-circle"></div>
+                                    <div class="bracket_left"><p>12/20/20</p><img src="/static/imgs/bracket_left.svg"></div>
+                                  </a>        
+                                </li>
+                                <!-- <li>
+                                  <a href="#0" data-date="28/02/2014" class="cd-h-timeline__date">
+                                    <div class="second-circle"></div>
+                                    <div class="bracket_left"><p>12/20/20</p><img src="/static/imgs/bracket_left.svg"></div>
+                                  </a>
+                                </li>
+                                <li>
+                                  <a href="#0" data-date="20/04/2014" class="cd-h-timeline__date">
+                                    <div class="second-circle"></div>
+                                  </a>
+                                </li>
+                                <li>
+                                  <a href="#0" data-date="20/05/2014" class="cd-h-timeline__date">
+                                    <div class="second-circle"></div>
+                                  </a>
+                                </li>
+                                <li>
+                                  <a href="#0" data-date="09/07/2014" class="cd-h-timeline__date">
+                                    <div class="second-circle"></div>
+                                  </a>
+                                </li>
+                                <li>
+                                  <a href="#0" data-date="30/08/2014" class="cd-h-timeline__date">
+                                    <div class="second-circle"></div>
+                                  </a>
+                                </li>
+                                <li>
+                                  <a href="#0" data-date="15/09/2014" class="cd-h-timeline__date">
+                                    <div class="second-circle"></div>
+                                  </a>
+                                </li>
+                                <li>
+                                  <a href="#0" data-date="01/11/2014" class="cd-h-timeline__date">
+                                    <div class="second-circle"></div>
+                                  </a>
+                                </li>
+                                <li>
+                                  <a href="#0" data-date="10/12/2014" class="cd-h-timeline__date">
+                                    <div class="second-circle"></div>
+                                  </a>
+                                </li>
+                                <li>
+                                  <a href="#0" data-date="19/01/2015" class="cd-h-timeline__date">
+                                    <div class="second-circle"></div>
+                                  </a>
+                                </li>
+                                <li>
+                                  <a href="#0" data-date="03/03/2015" class="cd-h-timeline__date">
+                                    <div class="second-circle"></div>
+                                  </a>
+                                </li> -->
                               </ol>
                     
                               <span class="cd-h-timeline__filling-line" aria-hidden="true"></span>
@@ -190,6 +237,15 @@
             <div class = "row">
                 <div class = "col-md-2">
                     <h1>/Thing 1/</h1>
+                    <table class="table">
+                    {% for entry in queryResults %}
+                    <tr style="background-color: red;">
+                        <td>{{ entry['Name'] }}</td>
+                        <td>{{ entry['Year'] }}</td>
+                        <td>{{ entry['id'] }}</td>
+                    </tr>
+                    {% endfor %}
+                    </table>
                 </div>
                 <div class = "col-md-8">
                     <!-- Info Blocks -->
@@ -201,9 +257,9 @@
         </div>
     </div>
     <div class="background_bottom"> </div>
-    <script src="js/timeline/util.js"></script> <!-- util functions included in the CodyHouse framework -->
-    <script src="js/timeline/swipe-content.js"></script> <!-- A Vanilla JavaScript plugin to detect touch interactions -->
-    <script src="js/timeline/main.js"></script>
+    <script type="text/javascript" src="/static/js/util.js"></script> <!-- util functions included in the CodyHouse framework -->
+    <script type="text/javascript" src="/static/js/swipe-content.js"></script> <!-- A Vanilla JavaScript plugin to detect touch interactions -->
+    <script type="text/javascript"  src="/static/js/main.js"></script>
 </body>
 
 

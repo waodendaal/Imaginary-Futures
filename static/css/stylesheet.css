@@ -8,6 +8,10 @@ h1, h2, h3, h4, h5 {
     color: #8CC5C4;
 }
 
+h1 {
+    font-size: 3em;
+}
+
 .border_gradient {
     background-image: -webkit-gradient(linear, left, right, color-stop(0.33, rgb(14,173,173)), color-stop(0.67, rgb(0,255,255)));
     background-image: -moz-linear-gradient(center bottom, rgb(14,173,173) 33%, rgb(0,255,255) 67% );    
@@ -15,10 +19,12 @@ h1, h2, h3, h4, h5 {
 
 .timeline_container {
     height: 25%;
+    margin-top:30px;
 }
 
 .info_blocks {
     height: 50%;
+    margin-top:20px;
 }
 
 /* Text block gradient border and center black */
