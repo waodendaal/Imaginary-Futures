@@ -8,7 +8,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- SCRIPTS -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
     <!--Timeline-->
@@ -18,8 +18,42 @@
     <link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" type="text/css" href="/static/css/stylesheet.css">
     <link type="text/css" href="https://fonts.googleapis.com/css?family=Rajdhani" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 <body>
+  <div class="popup">
+    <div class="popup_background"></div>
+    <div style="display:flex; justify-content:center">
+        <div class="popup_box"><div class="popup_box_inner ">
+            <div class="logo containerTV" style="margin-top:auto; margin-bottom:auto; width:250px; height:250px;">
+                <img class = "logoA screen" style="width:250px; height:250px;" src = "/static/imgs/logoA.svg">
+                <div class="containerTV" style="position:revert;">
+                <img class = "logoB screen" style="width:250px; height:250px;" src = "/static/imgs/logoB.svg">
+              </div>
+              <div class="containerTV" style="position:revert;">
+                <img class = "logoC screen" style="width:250px; height:250px;" src = "/static/imgs/logoC.svg">
+                </div>
+            </div>
+            <div>
+                <h2>What does the future look like</h2>
+                <em id="popup_prompt" class='cd-h-timeline__event-date'>...if all goes according to plan?</em>
+                <form action="/prompt" method="post" id="usrform">
+                    <textarea id="answer" rows="4" cols="50" name="answer" form="usrform"></textarea>
+                    <label>Year predicting</label>
+                    <div class='number-wrapper'>
+                        <input id="numberpicker" type="number" name="numberpicker" min="2020" placeholder="2020" value="2020" />
+                        <div id="picker-buttons">
+                          <div id="inc-button" class="spinner-button">+</div>
+                          <div id="dec-button" class="spinner-button">-</div>
+                        </div>
+                    </div>
+                  <input id="submit_button" type="submit" value="Predict">
+                </form> 
+            </div>
+        </div></div>
+    </div>
+  </div>
+  <div class="containerTV">
     <div class="background_top"></div>
     <div class = "container">
         <div class ="header">
@@ -31,11 +65,10 @@
                         <img class = "logoC" src = "/static/imgs/logoC.svg">
                     </div>
                 </div>
-                <div class="col-md-6">
-                    <h1>Imaginary Futures!</h1>
+                <div class="col-md-11">
+                    <h1 style="margin-bottom:0.5em;"><span style="font-weight:bolder; color:#e2d2ab;">Imaginary Futures:</span> Yesterday's Vision Of Tomorrow</h1>
                 </div>
             </div>
-            <h2>Yesterday's Vision Of Tomorrow</h2>
             <div class = "text_block">
                 <div>
                     Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna ali
@@ -43,68 +76,21 @@
             </div>
         </div>
         <div class = "timeline_container">
+          <p class="strip_gradient">||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||</p>
                 <section class="cd-h-timeline js-cd-h-timeline margin-bottom--md">                    
                         <div class="cd-h-timeline__container container">
                           <div class="cd-h-timeline__dates">
                             <div class="cd-h-timeline__line">
-                              <ol>
+                              <ol id="timeline_list">
+                                <!-- READ data from app.py -->
+                                {% for entry in queryResults %}
                                 <li>
-                                  <a href="#0" data-date="16/01/2014" class="cd-h-timeline__date cd-h-timeline__date--selected">
+                                  <a href="#0" onclick="postDataToFlask({{ entry['Year']}})" data-date="01/01/{{ entry['Year'] }}" class="cd-h-timeline__date ">
                                     <div class="second-circle"></div>
-                                    <div class="bracket_left"><p>12/20/20</p><img src="/static/imgs/bracket_left.svg"></div>
-                                  </a>        
-                                </li>
-                                <!-- <li>
-                                  <a href="#0" data-date="28/02/2014" class="cd-h-timeline__date">
-                                    <div class="second-circle"></div>
-                                    <div class="bracket_left"><p>12/20/20</p><img src="/static/imgs/bracket_left.svg"></div>
+                                    <div class="bracket_left"><p>{{ entry['Year'] }}</p><img src="/static/imgs/bracket_left.svg"></div>
                                   </a>
                                 </li>
-                                <li>
-                                  <a href="#0" data-date="20/04/2014" class="cd-h-timeline__date">
-                                    <div class="second-circle"></div>
-                                  </a>
-                                </li>
-                                <li>
-                                  <a href="#0" data-date="20/05/2014" class="cd-h-timeline__date">
-                                    <div class="second-circle"></div>
-                                  </a>
-                                </li>
-                                <li>
-                                  <a href="#0" data-date="09/07/2014" class="cd-h-timeline__date">
-                                    <div class="second-circle"></div>
-                                  </a>
-                                </li>
-                                <li>
-                                  <a href="#0" data-date="30/08/2014" class="cd-h-timeline__date">
-                                    <div class="second-circle"></div>
-                                  </a>
-                                </li>
-                                <li>
-                                  <a href="#0" data-date="15/09/2014" class="cd-h-timeline__date">
-                                    <div class="second-circle"></div>
-                                  </a>
-                                </li>
-                                <li>
-                                  <a href="#0" data-date="01/11/2014" class="cd-h-timeline__date">
-                                    <div class="second-circle"></div>
-                                  </a>
-                                </li>
-                                <li>
-                                  <a href="#0" data-date="10/12/2014" class="cd-h-timeline__date">
-                                    <div class="second-circle"></div>
-                                  </a>
-                                </li>
-                                <li>
-                                  <a href="#0" data-date="19/01/2015" class="cd-h-timeline__date">
-                                    <div class="second-circle"></div>
-                                  </a>
-                                </li>
-                                <li>
-                                  <a href="#0" data-date="03/03/2015" class="cd-h-timeline__date">
-                                    <div class="second-circle"></div>
-                                  </a>
-                                </li> -->
+                               {% endfor %}
                               </ol>
                     
                               <span class="cd-h-timeline__filling-line" aria-hidden="true"></span>
@@ -112,17 +98,44 @@
                           </div> <!-- .cd-h-timeline__dates -->
                             
                           <ul>
-                            <li><a href="#0" class="text--replace cd-h-timeline__navigation cd-h-timeline__navigation--prev cd-h-timeline__navigation--inactive">Prev</a></li>
-                            <li><a href="#0" class="text--replace cd-h-timeline__navigation cd-h-timeline__navigation--next">Next</a></li>
+                            <li><a href="#0" class="text--replace cd-h-timeline__navigation cd-h-timeline__navigation--prev cd-h-timeline__navigation--inactive">
+                              <i style="opacity:0.3;" class="fa fa-chevron-left"></i>
+                              <i style="opacity:0.6;"  class="fa fa-chevron-left"></i>
+                              <i class="fa fa-chevron-left"></i></a></li>
+                            <li><a href="#0" class="text--replace cd-h-timeline__navigation cd-h-timeline__navigation--next">
+                              <i  class="fa fa-chevron-right"></i>
+                              <i style="opacity:0.6;"  class="fa fa-chevron-right"></i>
+                              <i style="opacity:0.3;" class="fa fa-chevron-right"></i></a></li>
+    
                           </ul>
                         </div> <!-- .cd-h-timeline__container -->
-                    
+                        <p class="strip_gradient_bottom strip_gradient">||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||</p>
                         <div class="cd-h-timeline__events">
                           <ol>
-                            <li class="cd-h-timeline__event cd-h-timeline__event--selected text-component">
-                              <div class="cd-h-timeline__event-content container">
+                            <li id="modal_left" class="cd-h-timeline__event cd-h-timeline__event--selected text-component">
+                              <!-- <div class="cd-h-timeline__event-content container">
                                 <h2 class="cd-h-timeline__event-title">Horizontal Timeline</h2>
-                                <em class="cd-h-timeline__event-date">January 16th, 2014</em>
+                                <em class="cd-h-timeline__event-date">xxx</em>
+                                <p class="cd-h-timeline__event-description text--subtle"> 
+                                  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illum praesentium officia, fugit recusandae ipsa, quia velit nulla adipisci? Consequuntur aspernatur at, eaque hic repellendus sit dicta consequatur quae, ut harum ipsam molestias maxime non nisi reiciendis eligendi! Doloremque quia pariatur harum ea amet quibusdam quisquam, quae, temporibus dolores porro doloribus.
+                                </p>
+                              </div> -->
+                            </li>
+                    
+                            <li id="modal_right" class="cd-h-timeline__event text-component">
+                              <div class="cd-h-timeline__event-content container">
+                                <h2 class="cd-h-timeline__event-title">Event title here</h2>
+                                <em class="cd-h-timeline__event-date">xxx</em>
+                                <p class="cd-h-timeline__event-description text--subtle"> 
+                                  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illum praesentium officia, fugit recusandae ipsa, quia velit nulla adipisci? Consequuntur aspernatur at, eaque hic repellendus sit dicta consequatur quae, ut harum ipsam molestias maxime non nisi reiciendis eligendi! Doloremque quia pariatur harum ea amet quibusdam quisquam, quae, temporibus dolores porro doloribus.
+                                </p>
+                              </div>
+                            </li>
+                    
+                            <!-- <li class="cd-h-timeline__event text-component">
+                              <div class="cd-h-timeline__event-content container">
+                                <h2 class="cd-h-timeline__event-title">Event title here</h2>
+                                <em class="cd-h-timeline__event-date">xxx</em>
                                 <p class="cd-h-timeline__event-description text--subtle"> 
                                   Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illum praesentium officia, fugit recusandae ipsa, quia velit nulla adipisci? Consequuntur aspernatur at, eaque hic repellendus sit dicta consequatur quae, ut harum ipsam molestias maxime non nisi reiciendis eligendi! Doloremque quia pariatur harum ea amet quibusdam quisquam, quae, temporibus dolores porro doloribus.
                                 </p>
@@ -132,7 +145,7 @@
                             <li class="cd-h-timeline__event text-component">
                               <div class="cd-h-timeline__event-content container">
                                 <h2 class="cd-h-timeline__event-title">Event title here</h2>
-                                <em class="cd-h-timeline__event-date">February 28th, 2014</em>
+                                <em class="cd-h-timeline__event-date">xxx</em>
                                 <p class="cd-h-timeline__event-description text--subtle"> 
                                   Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illum praesentium officia, fugit recusandae ipsa, quia velit nulla adipisci? Consequuntur aspernatur at, eaque hic repellendus sit dicta consequatur quae, ut harum ipsam molestias maxime non nisi reiciendis eligendi! Doloremque quia pariatur harum ea amet quibusdam quisquam, quae, temporibus dolores porro doloribus.
                                 </p>
@@ -142,7 +155,7 @@
                             <li class="cd-h-timeline__event text-component">
                               <div class="cd-h-timeline__event-content container">
                                 <h2 class="cd-h-timeline__event-title">Event title here</h2>
-                                <em class="cd-h-timeline__event-date">March 20th, 2014</em>
+                                <em class="cd-h-timeline__event-date">xxx</em>
                                 <p class="cd-h-timeline__event-description text--subtle"> 
                                   Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illum praesentium officia, fugit recusandae ipsa, quia velit nulla adipisci? Consequuntur aspernatur at, eaque hic repellendus sit dicta consequatur quae, ut harum ipsam molestias maxime non nisi reiciendis eligendi! Doloremque quia pariatur harum ea amet quibusdam quisquam, quae, temporibus dolores porro doloribus.
                                 </p>
@@ -152,7 +165,7 @@
                             <li class="cd-h-timeline__event text-component">
                               <div class="cd-h-timeline__event-content container">
                                 <h2 class="cd-h-timeline__event-title">Event title here</h2>
-                                <em class="cd-h-timeline__event-date">May 20th, 2014</em>
+                                <em class="cd-h-timeline__event-date">xxx</em>
                                 <p class="cd-h-timeline__event-description text--subtle"> 
                                   Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illum praesentium officia, fugit recusandae ipsa, quia velit nulla adipisci? Consequuntur aspernatur at, eaque hic repellendus sit dicta consequatur quae, ut harum ipsam molestias maxime non nisi reiciendis eligendi! Doloremque quia pariatur harum ea amet quibusdam quisquam, quae, temporibus dolores porro doloribus.
                                 </p>
@@ -162,7 +175,43 @@
                             <li class="cd-h-timeline__event text-component">
                               <div class="cd-h-timeline__event-content container">
                                 <h2 class="cd-h-timeline__event-title">Event title here</h2>
-                                <em class="cd-h-timeline__event-date">July 9th, 2014</em>
+                                <em class="cd-h-timeline__event-date">xxx</em>
+                                <p class="cd-h-timeline__event-description text--subtle"> 
+                                  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illum praesentium officia, fugit recusandae ipsa, quia velit nulla adipisci? Consequuntur aspernatur at, eaque hic repellendus sit dicta consequatur quae, ut harum ipsam molestias maxime non nisi reiciendis eligendi! Doloremque quia pariatur harum ea amet quibusdam quisquam, quae, temporibus dolores porro doloribus.
+                                </p>
+                              </div>
+                            </li>
+                            <li class="cd-h-timeline__event text-component">
+                                <div class="cd-h-timeline__event-content container">
+                                  <h2 class="cd-h-timeline__event-title">Event title here</h2>
+                                  <em class="cd-h-timeline__event-date">xxx</em>
+                                  <p class="cd-h-timeline__event-description text--subtle"> 
+                                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illum praesentium officia, fugit recusandae ipsa, quia velit nulla adipisci? Consequuntur aspernatur at, eaque hic repellendus sit dicta consequatur quae, ut harum ipsam molestias maxime non nisi reiciendis eligendi! Doloremque quia pariatur harum ea amet quibusdam quisquam, quae, temporibus dolores porro doloribus.
+                                  </p>
+                                </div>
+                              </li>
+                              <li class="cd-h-timeline__event text-component">
+                                  <div class="cd-h-timeline__event-content container">
+                                    <h2 class="cd-h-timeline__event-title">Event title here</h2>
+                                    <em class="cd-h-timeline__event-date">xxx</em>
+                                    <p class="cd-h-timeline__event-description text--subtle"> 
+                                      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illum praesentium officia, fugit recusandae ipsa, quia velit nulla adipisci? Consequuntur aspernatur at, eaque hic repellendus sit dicta consequatur quae, ut harum ipsam molestias maxime non nisi reiciendis eligendi! Doloremque quia pariatur harum ea amet quibusdam quisquam, quae, temporibus dolores porro doloribus.
+                                    </p>
+                                  </div>
+                                </li>
+                                <li class="cd-h-timeline__event text-component">
+                                    <div class="cd-h-timeline__event-content container">
+                                      <h2 class="cd-h-timeline__event-title">Event title here</h2>
+                                      <em class="cd-h-timeline__event-date">xxx</em>
+                                      <p class="cd-h-timeline__event-description text--subtle"> 
+                                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illum praesentium officia, fugit recusandae ipsa, quia velit nulla adipisci? Consequuntur aspernatur at, eaque hic repellendus sit dicta consequatur quae, ut harum ipsam molestias maxime non nisi reiciendis eligendi! Doloremque quia pariatur harum ea amet quibusdam quisquam, quae, temporibus dolores porro doloribus.
+                                      </p>
+                                    </div>
+                                  </li>
+                            <li class="cd-h-timeline__event text-component">
+                              <div class="cd-h-timeline__event-content container">
+                                <h2 class="cd-h-timeline__event-title">Event title here</h2>
+                                <em class="cd-h-timeline__event-date">xxx</em>
                                 <p class="cd-h-timeline__event-description text--subtle"> 
                                   Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illum praesentium officia, fugit recusandae ipsa, quia velit nulla adipisci? Consequuntur aspernatur at, eaque hic repellendus sit dicta consequatur quae, ut harum ipsam molestias maxime non nisi reiciendis eligendi! Doloremque quia pariatur harum ea amet quibusdam quisquam, quae, temporibus dolores porro doloribus.
                                 </p>
@@ -172,37 +221,7 @@
                             <li class="cd-h-timeline__event text-component">
                               <div class="cd-h-timeline__event-content container">
                                 <h2 class="cd-h-timeline__event-title">Event title here</h2>
-                                <em class="cd-h-timeline__event-date">August 30th, 2014</em>
-                                <p class="cd-h-timeline__event-description text--subtle"> 
-                                  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illum praesentium officia, fugit recusandae ipsa, quia velit nulla adipisci? Consequuntur aspernatur at, eaque hic repellendus sit dicta consequatur quae, ut harum ipsam molestias maxime non nisi reiciendis eligendi! Doloremque quia pariatur harum ea amet quibusdam quisquam, quae, temporibus dolores porro doloribus.
-                                </p>
-                              </div>
-                            </li>
-                    
-                            <li class="cd-h-timeline__event text-component">
-                              <div class="cd-h-timeline__event-content container">
-                                <h2 class="cd-h-timeline__event-title">Event title here</h2>
-                                <em class="cd-h-timeline__event-date">September 15th, 2014</em>
-                                <p class="cd-h-timeline__event-description text--subtle"> 
-                                  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illum praesentium officia, fugit recusandae ipsa, quia velit nulla adipisci? Consequuntur aspernatur at, eaque hic repellendus sit dicta consequatur quae, ut harum ipsam molestias maxime non nisi reiciendis eligendi! Doloremque quia pariatur harum ea amet quibusdam quisquam, quae, temporibus dolores porro doloribus.
-                                </p>
-                              </div>
-                            </li>
-                    
-                            <li class="cd-h-timeline__event text-component">
-                              <div class="cd-h-timeline__event-content container">
-                                <h2 class="cd-h-timeline__event-title">Event title here</h2>
-                                <em class="cd-h-timeline__event-date">November 1st, 2014</em>
-                                <p class="cd-h-timeline__event-description text--subtle"> 
-                                  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illum praesentium officia, fugit recusandae ipsa, quia velit nulla adipisci? Consequuntur aspernatur at, eaque hic repellendus sit dicta consequatur quae, ut harum ipsam molestias maxime non nisi reiciendis eligendi! Doloremque quia pariatur harum ea amet quibusdam quisquam, quae, temporibus dolores porro doloribus.
-                                </p>
-                              </div>
-                            </li>
-                    
-                            <li class="cd-h-timeline__event text-component">
-                              <div class="cd-h-timeline__event-content container">
-                                <h2 class="cd-h-timeline__event-title">Event title here</h2>
-                                <em class="cd-h-timeline__event-date">December 10th, 2014</em>
+                                <em class="cd-h-timeline__event-date">xxx</em>
                                 <p class="cd-h-timeline__event-description text--subtle"> 
                                   Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illum praesentium officia, fugit recusandae ipsa, quia velit nulla adipisci? Consequuntur aspernatur at, eaque hic repellendus sit dicta consequatur quae, ut harum ipsam molestias maxime non nisi reiciendis eligendi! Doloremque quia pariatur harum ea amet quibusdam quisquam, quae, temporibus dolores porro doloribus.
                                 </p>
@@ -227,7 +246,7 @@
                                   Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illum praesentium officia, fugit recusandae ipsa, quia velit nulla adipisci? Consequuntur aspernatur at, eaque hic repellendus sit dicta consequatur quae, ut harum ipsam molestias maxime non nisi reiciendis eligendi! Doloremque quia pariatur harum ea amet quibusdam quisquam, quae, temporibus dolores porro doloribus.
                                 </p>
                               </div>
-                            </li>
+                            </li> -->
                           </ol>
                         </div> <!-- .cd-h-timeline__events -->
                       </section>
@@ -236,22 +255,20 @@
         <div class = "info_blocks">
             <div class = "row">
                 <div class = "col-md-2">
-                    <h1>/Thing 1/</h1>
-                    <table class="table">
-                    {% for entry in queryResults %}
-                    <tr style="background-color: red;">
-                        <td>{{ entry['Name'] }}</td>
-                        <td>{{ entry['Year'] }}</td>
-                        <td>{{ entry['id'] }}</td>
-                    </tr>
-                    {% endfor %}
-                    </table>
+                    <!-- <h1>/Thing 1/</h1> -->
+                    <!-- https://codepen.io/thebabydino/pen/wsxpE
+                    https://codepen.io/kappeh/pen/eWKLbY -->
+                    <!-- https://codepen.io/jotavejv/pen/pfFik
+                    https://codepen.io/ishaanpuniani/pen/eigfv
+                    https://codepen.io/mikehobizal/pen/jEyxYV
+                    https://codepen.io/chasekaiser/pen/ogXmOK
+                    https://codepen.io/Octavector/pen/dGBKJB -->
                 </div>
                 <div class = "col-md-8">
                     <!-- Info Blocks -->
                 </div>
                 <div class = "col-md-2">
-                    <h1>/Thing 2/</h1>
+                    <!-- <h1>/Thing 2/</h1> -->
                 </div>
             </div>
         </div>
@@ -260,7 +277,11 @@
     <script type="text/javascript" src="/static/js/util.js"></script> <!-- util functions included in the CodyHouse framework -->
     <script type="text/javascript" src="/static/js/swipe-content.js"></script> <!-- A Vanilla JavaScript plugin to detect touch interactions -->
     <script type="text/javascript"  src="/static/js/main.js"></script>
+  </div>
 </body>
+
+<script>
+</script>
 
 
 </html>

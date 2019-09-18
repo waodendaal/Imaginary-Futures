@@ -1,110 +1,486 @@
 body {
-    background: black;
-    font-family: 'Rajdhani', sans-serif;
-    color: #E2D2AB;
+	background: black;
+	font-family: 'Rajdhani', sans-serif;
+	color: #E2D2AB;
 }
-
 h1, h2, h3, h4, h5 {
-    color: #8CC5C4;
+	color: #8CC5C4;
 }
-
 h1 {
-    font-size: 3em;
+	font-size: 3em;
 }
-
+.header {
+	margin-top: 20px;
+	padding-bottom: 20px;
+}
 .border_gradient {
-    background-image: -webkit-gradient(linear, left, right, color-stop(0.33, rgb(14,173,173)), color-stop(0.67, rgb(0,255,255)));
-    background-image: -moz-linear-gradient(center bottom, rgb(14,173,173) 33%, rgb(0,255,255) 67% );    
+	background-image: -webkit-gradient(linear, left, right, color-stop(0.33, rgb(14, 173, 173)), color-stop(0.67, rgb(0, 255, 255)));
+	background-image: -moz-linear-gradient(center bottom, rgb(14, 173, 173) 33%, rgb(0, 255, 255) 67%);
 }
-
 .timeline_container {
-    height: 25%;
-    margin-top:30px;
+	height: 25%;
+	margin-top: 20px;
 }
-
 .info_blocks {
-    height: 50%;
-    margin-top:20px;
+	height: 50%;
+	margin-top: 20px;
 }
-
 /* Text block gradient border and center black */
-.text_block {
-    background-image: -webkit-gradient(linear, left, color-stop(0.33, rgb(226,210,171) ), color-stop(0.67,  rgb(140,197,196)));
-    background-image: -moz-linear-gradient(left, rgb(226,210,171) 33%, rgb(140,197,196) 67% );
-    padding: 2px; 
-    border-radius: 5px;
-}
-.text_block > div { 
-    background: black; 
-    border-radius:5px;
-    padding:5px;
-}
 
+.text_block {
+	background-image: -webkit-gradient(linear, left, color-stop(0.33, rgb(226, 210, 171)), color-stop(0.67, rgb(140, 197, 196)));
+	background-image: -moz-linear-gradient(left, rgb(226, 210, 171) 33%, rgb(140, 197, 196) 67%);
+	padding: 2px;
+	border-radius: 5px;
+}
+.text_block>div {
+	background: black;
+	border-radius: 5px;
+	padding: 5px;
+}
 .background_top {
-    /* Backgronud image gradient solution: https://stackoverflow.com/questions/16589519/use-css-gradient-over-background-image */
-    width: 100%;
-    height: 25%;
-    background: -moz-linear-gradient(top, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0) 59%, rgba(0, 0, 0, 0.65) 100%), url('../imgs/dots-grid-design-by-Vexels.svg') repeat;
-    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, rgba(0, 0, 0, 0)), color-stop(0%, rgba(0, 0, 0, 0)), color-stop(100%, rgba(0, 0, 0, 0.65))), url('imgs/dots-grid-design-by-Vexels.svg') repeat;
-    background: -webkit-linear-gradient(top, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0) 59%, rgba(0, 0, 0, 0.65) 100%), url('../imgs/dots-grid-design-by-Vexels.svg') repeat;
-    background: -o-linear-gradient(top, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0) 59%, rgba(0, 0, 0, 0.65) 100%), url('../imgs/dots-grid-design-by-Vexels.svg') repeat;
-    background: -ms-linear-gradient(top, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0) 59%, rgba(0, 0, 0, 0.65) 100%), url('../imgs/dots-grid-design-by-Vexels.svg') repeat;
-    background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0) 59%, rgba(0, 0, 0, 0.65) 100%), url('../imgs/dots-grid-design-by-Vexels.svg') repeat;
-    background-size: 20%;
-    position: absolute;
-    z-index:-1;
-    top:0;
+	/* Backgronud image gradient solution: https://stackoverflow.com/questions/16589519/use-css-gradient-over-background-image */
+	width: 100%;
+	height: 25%;
+	background: -moz-linear-gradient(top, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0) 59%, rgba(0, 0, 0, 0.65) 100%), url('../imgs/dots-grid-design-by-Vexels.svg') repeat;
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, rgba(0, 0, 0, 0)), color-stop(0%, rgba(0, 0, 0, 0)), color-stop(100%, rgba(0, 0, 0, 0.65))), url('imgs/dots-grid-design-by-Vexels.svg') repeat;
+	background: -webkit-linear-gradient(top, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0) 59%, rgba(0, 0, 0, 0.65) 100%), url('../imgs/dots-grid-design-by-Vexels.svg') repeat;
+	background: -o-linear-gradient(top, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0) 59%, rgba(0, 0, 0, 0.65) 100%), url('../imgs/dots-grid-design-by-Vexels.svg') repeat;
+	background: -ms-linear-gradient(top, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0) 59%, rgba(0, 0, 0, 0.65) 100%), url('../imgs/dots-grid-design-by-Vexels.svg') repeat;
+	background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0) 59%, rgba(0, 0, 0, 0.65) 100%), url('../imgs/dots-grid-design-by-Vexels.svg') repeat;
+	background-size: 20%;
+	position: absolute;
+	z-index: -1;
+	top: 0;
 }
 .background_bottom {
-    width: 100%;
-    height: 50%;
-    background: -moz-linear-gradient(bottom, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0) 59%, rgba(0, 0, 0, 0.65) 100%), url('../imgs/dots-grid-design-by-Vexels.svg') repeat;
-    background: -webkit-gradient(linear, left bottom, left top, color-stop(0%, rgba(0, 0, 0, 0)), color-stop(0%, rgba(0, 0, 0, 0)), color-stop(100%, rgba(0, 0, 0, 0.65))), url('imgs/dots-grid-design-by-Vexels.svg') repeat;
-    background: -webkit-linear-gradient(bottom, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0) 59%, rgba(0, 0, 0, 0.65) 100%), url('../imgs/dots-grid-design-by-Vexels.svg') repeat;
-    background: -o-linear-gradient(bottom, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0) 59%, rgba(0, 0, 0, 0.65) 100%), url('../imgs/dots-grid-design-by-Vexels.svg') repeat;
-    background: -ms-linear-gradient(bottom, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0) 59%, rgba(0, 0, 0, 0.65) 100%), url('../imgs/dots-grid-design-by-Vexels.svg') repeat;
-    background: linear-gradient(to top, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0) 59%, rgba(0, 0, 0, 0.65) 100%), url('../imgs/dots-grid-design-by-Vexels.svg') repeat;
-    background-size: 20%;
-    position: absolute;
-    z-index:-1;
-    bottom:0;
+	width: 100%;
+	height: 50%;
+	background: -moz-linear-gradient(bottom, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0) 59%, rgba(0, 0, 0, 0.65) 100%), url('../imgs/dots-grid-design-by-Vexels.svg') repeat;
+	background: -webkit-gradient(linear, left bottom, left top, color-stop(0%, rgba(0, 0, 0, 0)), color-stop(0%, rgba(0, 0, 0, 0)), color-stop(100%, rgba(0, 0, 0, 0.65))), url('imgs/dots-grid-design-by-Vexels.svg') repeat;
+	background: -webkit-linear-gradient(bottom, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0) 59%, rgba(0, 0, 0, 0.65) 100%), url('../imgs/dots-grid-design-by-Vexels.svg') repeat;
+	background: -o-linear-gradient(bottom, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0) 59%, rgba(0, 0, 0, 0.65) 100%), url('../imgs/dots-grid-design-by-Vexels.svg') repeat;
+	background: -ms-linear-gradient(bottom, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0) 59%, rgba(0, 0, 0, 0.65) 100%), url('../imgs/dots-grid-design-by-Vexels.svg') repeat;
+	background: linear-gradient(to top, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0) 59%, rgba(0, 0, 0, 0.65) 100%), url('../imgs/dots-grid-design-by-Vexels.svg') repeat;
+	background-size: 20%;
+	position: absolute;
+	z-index: -1;
+	bottom: 0;
 }
 /* Animate the logo. Code with help from: http://jsfiddle.net/gionaf/Ugc5g/ */
+
 .logo {
-    position:relative;
-    width: 50px;
-    height: 50px;
-    margin-right: 10px;
+	position: relative;
+	width: 50px;
+	height: 50px;
+	margin-right: 10px;
 }
-
 .logo img {
-    position: absolute;
-    width: 50px;
-    height: 50px;
+	position: absolute;
+	width: 50px;
+	height: 50px;
 }
-
 .logoA {
-    z-index:3;
+	z-index: 2;
 }
-
 .logoB {
-    z-index:2;
-    -webkit-animation:spinB 4s linear infinite;
-    -moz-animation:spinB 4s linear infinite;
-    animation:spinB 4s linear infinite;
+	z-index: 2;
+	-webkit-animation: spinB 4s linear infinite;
+	-moz-animation: spinB 4s linear infinite;
+	animation: spinB 4s linear infinite;
 }
-
 .logoC {
-    z-index:1;
-    -webkit-animation:spinC 4s linear infinite;
-    -moz-animation:spinC 4s linear infinite;
-    animation:spinC 4s linear infinite;
+	z-index: 1;
+	-webkit-animation: spinC 4s linear infinite;
+	-moz-animation: spinC 4s linear infinite;
+	animation: spinC 4s linear infinite;
 }
+@-moz-keyframes spinB {
+	100% {
+		-moz-transform: rotate(-360deg);
+	}
+}
+@-webkit-keyframes spinB {
+	100% {
+		-webkit-transform: rotate(-360deg);
+	}
+}
+@keyframes spinB {
+	100% {
+		-webkit-transform: rotate(-360deg);
+		transform: rotate(-360deg);
+	}
+}
+@-moz-keyframes spinC {
+	100% {
+		-moz-transform: rotate(360deg);
+	}
+}
+@-webkit-keyframes spinC {
+	100% {
+		-webkit-transform: rotate(360deg);
+	}
+}
+@keyframes spinC {
+	100% {
+		-webkit-transform: rotate(360deg);
+		transform: rotate(360deg);
+	}
+}
+.year_color {
+	color: #e2d2ab;
+}
+/* Popup */
 
-@-moz-keyframes spinB { 100% { -moz-transform: rotate(-360deg); } }
-@-webkit-keyframes spinB { 100% { -webkit-transform: rotate(-360deg); } }
-@keyframes spinB { 100% { -webkit-transform: rotate(-360deg); transform:rotate(-360deg); } }
+#usrform {
+	margin-right: 10px;
+}
+#popup_prompt {
+	font-size: 1.5em;
+}
+.popup {
+	display: none;
+	position: fixed;
+	width: 100vw;
+	height: 100vh;
+	z-index: 1000;
+}
+#answer {
+	width: 100%;
+	margin-bottom: 10px;
+}
+.popup_box {
+	/* width:50vw; */
+	top: 25%;
+	background-image: -moz-linear-gradient(left, rgb(226, 210, 171) 33%, rgb(140, 197, 196) 67%);
+	padding: 5px;
+	border-radius: 5px;
+	display: grid;
+	z-index: 1001;
+	position: fixed;
+}
+.popup_box_inner {
+	background: black;
+	background-size: auto;
+	border-radius: 5px;
+	padding: 5px;
+	display: flex;
+}
+.popup_background {
+	width: 100vw;
+	height: 100vh;
+	position: fixed;
+	background-color: black;
+	opacity: 0.5;
+}
+/* Number picker */
 
-@-moz-keyframes spinC { 100% { -moz-transform: rotate(360deg); } }
-@-webkit-keyframes spinC { 100% { -webkit-transform: rotate(360deg); } }
-@keyframes spinC { 100% { -webkit-transform: rotate(360deg); transform:rotate(360deg); } }
+#numberpicker {
+	/* position: absolute; */
+	left: 10px;
+	top: 10px;
+	width: 59px;
+	height: 20px;
+	padding: 0px;
+	font-size: 14pt;
+	border: solid 0.5px #000;
+	z-index: 1;
+	color: white;
+	background-color: black;
+}
+.text_entry {
+	display: none;
+}
+.text_entry h2 {
+	margin-top: 10px !important;
+}
+.spinner-button {
+	cursor: default;
+	z-index: 2;
+	background-color: black;
+	color: #8cc5c4;
+	width: 16.5px;
+	text-align: center;
+	margin: 0px;
+	pointer-events: none;
+	height: 10px;
+	line-height: 10px;
+}
+#picker-buttons {
+	pointer-events: none;
+	position: absolute;
+}
+#submit_button {
+	background-color: black;
+	border: 1px solid #8cc5c4;
+	margin: 10px 0px 10px;
+	color: #8cc5c4;
+	border-radius: 7px;
+}
+#submit_button:hover, #submit_button:active, #submit_button:focus {
+	color: black;
+	background-color: #8cc5c4;
+}
+/* Television Effect */
+
+#switch {
+	display: none;
+}
+.switch-label {
+	display: inline-block;
+	cursor: pointer;
+	background: #fff;
+	color: #111;
+	padding: 10px;
+	padding-left: 15px;
+	padding-right: 15px;
+	border-radius: 5px;
+	margin-top: 10px;
+	box-shadow: 0 2px #666;
+}
+.switch-label::after {
+	content: "on";
+}
+.switch-label::before {
+	content: " ";
+	display: inline-block;
+	border-radius: 100%;
+	width: 10px;
+	height: 10px;
+	background: #003321;
+	margin-right: 10px;
+	border: 1px solid #111;
+}
+.switch-label:active {
+	box-shadow: none;
+	transform: translate3d(0, 2px, 0);
+}
+#switch:checked+.switch-label::before {
+	background: #22ff55;
+}
+#switch:checked+.switch-label::after {
+	content: "off";
+}
+@keyframes flicker {
+	0% {
+		opacity: 0.97875;
+	}
+	5% {
+		opacity: 0.54267;
+	}
+	10% {
+		opacity: 0.96416;
+	}
+	15% {
+		opacity: 0.35612;
+	}
+	20% {
+		opacity: 0.83355;
+	}
+	25% {
+		opacity: 0.40867;
+	}
+	30% {
+		opacity: 0.94239;
+	}
+	35% {
+		opacity: 0.12589;
+	}
+	40% {
+		opacity: 0.61554;
+	}
+	45% {
+		opacity: 0.51078;
+	}
+	50% {
+		opacity: 0.16541;
+	}
+	55% {
+		opacity: 0.26512;
+	}
+	60% {
+		opacity: 0.86469;
+	}
+	65% {
+		opacity: 0.05759;
+	}
+	70% {
+		opacity: 0.96286;
+	}
+	75% {
+		opacity: 0.09127;
+	}
+	80% {
+		opacity: 0.3058;
+	}
+	85% {
+		opacity: 0.78489;
+	}
+	90% {
+		opacity: 0.25143;
+	}
+	95% {
+		opacity: 0.13711;
+	}
+	100% {
+		opacity: 0.5256;
+	}
+}
+.containerTV {
+	/* background: #121010; */
+	/* position: relative; */
+	/* overflow: hidden; */
+	border-radius: 25px;
+	/* border: 2px solid #666; */
+	;
+}
+.containerTV::after {
+	content: " ";
+	display: block;
+	position: absolute;
+	top: 0;
+	left: 0;
+	bottom: 0;
+	right: 0;
+	background: rgba(18, 16, 16, 0.1);
+	opacity: 0;
+	z-index: 2;
+	pointer-events: none;
+}
+.containerTV::before {
+	content: " ";
+	display: block;
+	position: absolute;
+	top: 0;
+	left: 0;
+	bottom: 0;
+	right: 0;
+	background: linear-gradient(rgba(18, 16, 16, 0) 50%, rgba(0, 0, 0, 0.25) 50%), linear-gradient(90deg, rgba(255, 0, 0, 0.06), rgba(0, 255, 0, 0.02), rgba(0, 0, 255, 0.06));
+	z-index: 5;
+	background-size: 100% 2px, 3px 100%;
+	pointer-events: none;
+}
+#switch:checked~.containerTV::after {
+	animation: flicker 0.15s infinite;
+}
+@keyframes turn-on {
+	0% {
+		/* transform: scale(1, 0.8) translate3d(0, 0, 0);
+      -webkit-filter: brightness(30);
+      filter: brightness(30); */
+		opacity: 0;
+	}
+	/* 3.5% {
+      transform: scale(1, 0.8) translate3d(0, 100%, 0);
+    }
+    3.6% {
+      transform: scale(1, 0.8) translate3d(0, -100%, 0);
+      opacity: 1;
+    }
+    9% {
+      transform: scale(1.3, 0.6) translate3d(0, 100%, 0);
+      -webkit-filter: brightness(30);
+      filter: brightness(30);
+      opacity: 0;
+    }
+    11% {
+      transform: scale(1, 1) translate3d(0, 0, 0);
+      -webkit-filter: contrast(0) brightness(0);
+      filter: contrast(0) brightness(0);
+      opacity: 0;
+    } */
+	100% {
+		/* transform: scale(1, 1) translate3d(0, 0, 0);
+      -webkit-filter: contrast(1) brightness(1.2) saturate(1.3);
+      filter: contrast(1) brightness(1.2) saturate(1.3); */
+		opacity: 1;
+	}
+}
+@keyframes turn-off {
+	0% {
+		transform: scale(1, 1.3) translate3d(0, 0, 0);
+		-webkit-filter: brightness(1);
+		filter: brightness(1);
+		opacity: 1;
+	}
+	60% {
+		transform: scale(1.3, 0.001) translate3d(0, 0, 0);
+		-webkit-filter: brightness(10);
+		filter: brightness(10);
+	}
+	100% {
+		animation-timing-function: cubic-bezier(0.755, 0.05, 0.855, 0.06);
+		transform: scale(0, 0.0001) translate3d(0, 0, 0);
+		-webkit-filter: brightness(50);
+		filter: brightness(50);
+	}
+}
+.screen {
+	width: 100%;
+	height: 100%;
+	background-size: cover;
+	border: none;
+}
+#switch~.containerTV>.screen {
+	animation: turn-off 0.55s cubic-bezier(0.23, 1, 0.32, 1);
+	animation-fill-mode: forwards;
+}
+#switch:checked~.containerTV>.screen {
+	animation: turn-on 4s linear;
+	animation-fill-mode: forwards;
+}
+@keyframes overlay-anim {
+	0% {
+		visibility: hidden;
+	}
+	20% {
+		visibility: hidden;
+	}
+	21% {
+		visibility: visible;
+	}
+	100% {
+		visibility: hidden;
+	}
+}
+.overlay {
+	color: #00ff00;
+	position: absolute;
+	top: 20px;
+	left: 20px;
+	font-size: 60px;
+	visibility: hidden;
+	pointer-events: none;
+}
+#switch:checked~.containerTV .overlay {
+	animation: overlay-anim 5s linear;
+	animation-fill-mode: forwards;
+}
+.strip_gradient {
+	overflow: hidden;
+	background: -webkit-linear-gradient(to right, rgba(255, 0, 0, 0), rgba(255, 0, 0, 1));
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+	background-image: linear-gradient(to right, black, #8cc5c4, #8cc5c4, #8cc5c4, #8cc5c4, #8cc5c4, #8cc5c4, black);
+	font-weight: bold;
+}
+.strip_gradient_bottom {
+	margin-top: 10px;
+	background-image: linear-gradient(to right, black, #e2d2af, #e2d2af, #e2d2af, #e2d2af, #e2d2af, #e2d2af, black);
+}
+@media only screen and (max-width: 400px) {
+	.text_entry {
+		display: block;
+	}
+	.event-content_image {
+		width: 100% !important;
+		margin: 0;
+		height: 150px !important;
+	}
+	h1 {
+		font-size: 1.5em;
+	}
+	h1 span {
+		display: block;
+	}
+}
