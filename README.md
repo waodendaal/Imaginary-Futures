@@ -4,8 +4,6 @@ This is the final project for the Harvardx / edX CS50 course.
 It is a simple website that shows what different movies, films, and other media from the past thought the future would look like. 
 The interface is styled in a retro-futurist way, borrowing from the sci-fi dashboards of movies such as Aliens. The main functionality of the website is a timeline scroller that reads data from a back-end database and dynamically populates the cards below the timeline. The images for each entry is also dynamically loaded from a database URL (this is to save storage space, as there are so many entries!).
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/Pd2PCaxcqq8" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-
 The most difficult part of this project is not in the web app itself, but was rather the preperation work. I had to create 2 web scrappers to populate my database. The one scrapped information about the movies from a Wikipedia page. The second scrapped image URLs from Bing search results (it would make searches from the database data, and then find the image search result URLs). 
 
 The timeline was also tricky, as the code I borrowed is a static timeline. I had to rewrite some of the Javascript/JQuery to make it work dynimically with the Python/Flask app. 
