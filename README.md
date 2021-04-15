@@ -6,7 +6,7 @@ The interface is styled in a retro-futurist way, borrowing from the sci-fi dashb
 
 <img src="demo.gif" width="500" alt="Video">
 
-[Watch the demo](https://www.youtube.com/watch?v=Pd2PCaxcqq8&feature=youtu.be)
+[Watch the demo](https://vimeo.com/534491719)
 
 
 The most difficult part of this project is not in the web app itself, but was rather the preperation work. I had to create 2 web scrappers to populate my database. The one scrapped information about the movies from a Wikipedia page. The second scrapped image URLs from Bing search results (it would make searches from the database data, and then find the image search result URLs). 
